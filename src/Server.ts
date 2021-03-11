@@ -21,7 +21,7 @@ class Signal {
         Signal.signals.set(this.uuid, this);
         this.expireAt = new Date(Date.now() + timeoutMs)
         this.timeout = setTimeout(() => {
-            console.log("[TIMEOUT]")
+            console.log("[TIMEOUT]");
             this.delete();
         }, timeoutMs)
     }
